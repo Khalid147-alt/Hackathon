@@ -1,158 +1,282 @@
-// app/shop/page.tsx
-'use client';
-import Image from 'next/image';
+import React from "react";
+import ProductDetails from "./Product-details";
 
-import Features from '../components/features';
-import { useState } from 'react';
-import { ProductCard } from '../components/ProductCard';
-import Breadcrumb from '../components/BreadCrumb';
-
-const ShopPage = () => {
-  const [sortBy, setSortBy] = useState('default');
-  const [view, setView] = useState('grid');
-
-  // Mock products data
+const Shop = () => {
   const products = [
     {
-      id: 1,
-      name: 'Asgaard sofa',
-      category: 'Sofa',
-      price: 2500.0,
-      image: '/Asgaard sofa 3.png',
-      isNew: true,
-    },
-    // Add more products here...
-  ];
-
-  // Mock special offers data
-  const specialOffers = [
-    {
-      id: 1,
-      name: 'Summer Sale',
-      description: 'Get 20% off on all sofas',
-      image: '/Asgaard sofa 3.png',
-      href: '/offers/summer-sale',
+      name: "Syltherine",
+      price: "Rp 2.500.000",
+      image: "/nn1.png", 
+      badge: "Sale",
+      creator: {
+        name: "John Doe",
+        avatar: "/creator1.jpg", 
+      },
     },
     {
-      id: 2,
-      name: 'Winter Wonders',
-      description: 'Save big on winter furniture',
-      image: '/Group 107.png',
-      href: '/offers/winter-wonders',
+      name: "Leviosa",
+      price: "Rp 2.500.000",
+      image: "/nn2.png",
+      badge: null,
+      creator: {
+        name: "Jane Smith",
+        avatar: "/creator2.jpg",
+      },
     },
     {
-      id: 3,
-      name: 'Mask Group Offer',
-      description: 'Exclusive deals on selected items',
-      image: '/Mask Group.png',
-      href: '/offers/mask-group',
+      name: "Lolito",
+      price: "Rp 2.500.000",
+      image: "/nn3.png",
+      badge: "New",
+      creator: {
+        name: "Alex Johnson",
+        avatar: "/creator3.jpg",
+      },
     },
-    // Add more special offers here...
+    {
+      name: "Respira",
+      price: "Rp 2.500.000",
+      image: "/nn4.jpeg",
+      badge: "Hot",
+      creator: {
+        name: "Emily Davis",
+        avatar: "/creator4.jpg",
+      },
+    },
+    {
+      name: "Syltherine",
+      price: "Rp 2.500.000",
+      image: "/nn1.png", 
+      badge: "Sale",
+      creator: {
+        name: "John Doe",
+        avatar: "/creator1.jpg", 
+      },
+    },
+    {
+      name: "Leviosa",
+      price: "Rp 2.500.000",
+      image: "/nn2.png",
+      badge: null,
+      creator: {
+        name: "Jane Smith",
+        avatar: "/creator2.jpg",
+      },
+    },
+    {
+      name: "Lolito",
+      price: "Rp 2.500.000",
+      image: "/nn3.png",
+      badge: "New",
+      creator: {
+        name: "Alex Johnson",
+        avatar: "/creator3.jpg",
+      },
+    },
+    {
+      name: "Respira",
+      price: "Rp 2.500.000",
+      image: "/nn4.jpeg",
+      badge: "Hot",
+      creator: {
+        name: "Emily Davis",
+        avatar: "/creator4.jpg",
+      },
+    },
+    {
+      name: "Syltherine",
+      price: "Rp 2.500.000",
+      image: "/nn1.png", 
+      badge: "Sale",
+      creator: {
+        name: "John Doe",
+        avatar: "/creator1.jpg", 
+      },
+    },
+    {
+      name: "Leviosa",
+      price: "Rp 2.500.000",
+      image: "/nn2.png",
+      badge: null,
+      creator: {
+        name: "Jane Smith",
+        avatar: "/creator2.jpg",
+      },
+    },
+    {
+      name: "Lolito",
+      price: "Rp 2.500.000",
+      image: "/nn3.png",
+      badge: "New",
+      creator: {
+        name: "Alex Johnson",
+        avatar: "/creator3.jpg",
+      },
+    },
+    {
+      name: "Respira",
+      price: "Rp 2.500.000",
+      image: "/nn4.jpeg",
+      badge: "Hot",
+      creator: {
+        name: "Emily Davis",
+        avatar: "/creator4.jpg",
+      },
+    },
+    {
+      name: "Syltherine",
+      price: "Rp 2.500.000",
+      image: "/nn1.png", 
+      badge: "Sale",
+      creator: {
+        name: "John Doe",
+        avatar: "/creator1.jpg", 
+      },
+    },
+    {
+      name: "Leviosa",
+      price: "Rp 2.500.000",
+      image: "/nn2.png",
+      badge: null,
+      creator: {
+        name: "Jane Smith",
+        avatar: "/creator2.jpg",
+      },
+    },
+    {
+      name: "Lolito",
+      price: "Rp 2.500.000",
+      image: "/nn3.png",
+      badge: "New",
+      creator: {
+        name: "Alex Johnson",
+        avatar: "/creator3.jpg",
+      },
+    },
+    {
+      name: "Respira",
+      price: "Rp 2.500.000",
+      image: "/nn4.jpeg",
+      badge: "Hot",
+      creator: {
+        name: "Emily Davis",
+        avatar: "/creator4.jpg",
+      },
+    },
+    
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Breadcrumb */}
-      <Breadcrumb
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'Shop', href: '/shop' },
-        ]}
-      />
-
-      {/* Header Section */}
-      <div className="flex justify-between items-center mt-8 mb-6">
-        <div className="flex items-center space-x-4">
-          <h1 className="text-2xl font-semibold">Shop</h1>
-          <span className="text-gray-500">Showing {products.length} results</span>
-        </div>
-        <div className="flex items-center space-x-4">
-          {/* Sorting Dropdown */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-          >
-            <option value="default">Default sorting</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="newest">Newest</option>
-          </select>
-
-          {/* View Toggle Buttons */}
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setView('grid')}
-              className={`p-2 ${view === 'grid' ? 'text-yellow-500' : 'text-gray-500'}`}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={() => setView('list')}
-              className={`p-2 ${view === 'list' ? 'text-yellow-500' : 'text-gray-500'}`}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Main Image */}
+      <div className="relative">
+        <img
+          src="/n1.jpeg" 
+          alt="Shop Banner"
+          className="w-full h-64 object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+          <h1 className="text-4xl font-bold text-white">Shop</h1>
         </div>
       </div>
 
-      {/* Products Section */}
-      <div
-        className={`grid ${
-          view === 'grid'
-            ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
-            : 'grid-cols-1'
-        } gap-6`}
-      >
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} view={view as 'grid' | 'list'} />
+      {/* Header */}
+      <div className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-6">
+          <p className="text-sm text-gray-500">Home / Shop</p>
+        </div>
+      </div>
+
+      {/* Filter and Sorting */}
+      <div className="container mx-auto px-4 py-6 flex flex-wrap items-center justify-between bg-gray-100 rounded-md">
+        <div className="flex items-center gap-4">
+          <button className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-sm font-medium rounded-md">
+            Filter
+          </button>
+          <p className="text-sm text-gray-600">Showing 1–4 of 12 results</p>
+        </div>
+        <div className="flex items-center gap-4">
+          <p className="text-sm text-gray-600">Show:</p>
+          <select
+            className="block w-20 bg-white border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+          >
+            <option>4</option>
+            <option>8</option>
+            <option>12</option>
+          </select>
+          <p className="text-sm text-gray-600">Sort by:</p>
+          <select
+            className="block w-40 bg-white border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+          >
+            <option>Default</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Product Grid */}
+      <div className="container mx-auto px-4 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.map((product, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg overflow-hidden group relative"
+          >
+            {/* Product Image */}
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-52 object-cover group-hover:opacity-75 transition-opacity"
+            />
+            {product.badge && (
+              <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-medium py-1 px-2 rounded-md">
+                {product.badge}
+              </span>
+            )}
+            <div className="p-4">
+              {/* Product Name and Price */}
+              <h3 className="text-sm font-semibold text-gray-800">
+                {product.name}
+              </h3>
+              <p className="text-sm text-gray-600 mt-1">{product.price}</p>
+
+              {/* Creator Information */}
+              <div className="flex items-center gap-2 mt-3">
+                <img
+                  src={product.creator.avatar}
+                  alt={product.creator.name}
+                  className="w-8 h-8 rounded-full"
+                />
+                <p className="text-sm text-gray-600">{product.creator.name}</p>
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <button className="bg-white text-sm text-gray-700 py-2 px-4 rounded-md shadow hover:bg-gray-100">
+                Add to Cart
+              </button>
+            </div>
+          </div>
         ))}
       </div>
 
-      {/* Special Offers Section */}
-      <div className="mt-12">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold">Special Offers</h2>
-          <p className="text-gray-500">Check out our latest deals and discounts!</p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {specialOffers.map((offer) => (
-            <div key={offer.id} className="relative group">
-              <div
-                className="w-full h-64 bg-cover bg-center rounded-lg overflow-hidden"
-                style={{ backgroundImage: `url(${offer.image})` }}
-              >
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a href={offer.href} className="text-white text-lg font-semibold">
-                    View Offer
-                  </a>
-                </div>
-              </div>
-              <div className="mt-4 text-center">
-                <h3 className="text-xl font-semibold">{offer.name}</h3>
-                <p className="text-gray-500">{offer.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Pagination */}
+      <div className="container mx-auto px-4 py-6 flex justify-center gap-4">
+        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+          1
+        </button>
+        <button className="px-4 py-2 bg-white text-gray-700 rounded-md shadow border hover:bg-gray-100">
+          2
+        </button>
+        <button className="px-4 py-2 bg-white text-gray-700 rounded-md shadow border hover:bg-gray-100">
+          3
+        </button>
+        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+          Next
+        </button>
       </div>
+      <ProductDetails />
     </div>
   );
 };
 
-export default ShopPage;
+export default Shop;

@@ -4,10 +4,12 @@ import Image from 'next/image';
 import Features from './components/features';
 import { ProductCard } from './components/ProductCard';
 import ProductsPage from './components/product-page';
+import Breadcrumb from './components/BreadCrumb';
 
 export default function Home() {
   return (
     <>
+   
    
     
     <main className="min-h-screen w-full relative">
@@ -56,7 +58,9 @@ export default function Home() {
   </div>
    
 </main>
+
 <ProductsPage />
+
 
     </>
   );

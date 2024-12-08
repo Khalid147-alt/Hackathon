@@ -1,4 +1,4 @@
-// components/Features.tsx
+
 export default function Features() {
     const features = [
       { icon: "fas fa-couch", title: "High Quality", description: "Crafted from top materials" },
