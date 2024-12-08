@@ -1,21 +1,31 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .nav-link {
+    @apply text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium relative transition-colors duration-200;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .icon-button {
+    @apply p-2 text-gray-700 hover:text-gray-900 rounded-full hover:bg-gray-100 transition-colors duration-200 relative;
+  }
+
+  .mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200;
+  }
+
+  .mobile-icon-button {
+    @apply p-2 text-gray-700 hover:text-gray-900 rounded-full hover:bg-gray-100 transition-colors duration-200;
+  }
 }
