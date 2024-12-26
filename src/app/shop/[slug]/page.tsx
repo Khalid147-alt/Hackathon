@@ -12,7 +12,7 @@ const ProductDetail = ({ params }: { params: { slug: string } }) => {
     name: 'Asgaard sofa',
     price: 2500.00,
     description: 'Setting the bar as one of our most popular and aesthetically pleasing pieces, the Asgaard sofa is influenced by modern Nordic design...',
-    sku: '1234',''
+    sku: '1234',
     category: 'Sofa',
     tags: ['Sofa', 'Chair', 'Home'],
     dimensions: {
