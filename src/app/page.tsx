@@ -5,6 +5,7 @@ import Features from './components/features';
 import { ProductCard } from './components/ProductCard';
 import ProductsPage from './components/product-page';
 import Breadcrumb from './components/BreadCrumb';
+import ProPage from './components/pro-page';
 
 export default function Home() {
   return (
@@ -55,6 +56,7 @@ export default function Home() {
   </div>
    
 </main>
+<ProPage />
 
 <ProductsPage />
 
