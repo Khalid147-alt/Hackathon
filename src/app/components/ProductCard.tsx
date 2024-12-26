@@ -23,6 +23,7 @@ export function ProductCard({
   status = "Available",
   tag,
   view
+  
 }: ProductCardProps) {
   const { id, name, price, image, isNew } = product;
 

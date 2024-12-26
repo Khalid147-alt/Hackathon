@@ -1,6 +1,6 @@
-// components/Hero.tsx
+
 import Image from "next/image";
-import sofaImage from "../public/sofa.png"; // Replace with actual image path
+import sofaImage from "../public/sofa.png"; 
 
 export default function Hero() {
   return (

@@ -9,9 +9,6 @@ import Breadcrumb from './components/BreadCrumb';
 export default function Home() {
   return (
     <>
-   
-   
-    
     <main className="min-h-screen w-full relative">
   {/* Background Image */}
   <div

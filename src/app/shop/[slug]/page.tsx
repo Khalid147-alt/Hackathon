@@ -1,6 +1,4 @@
-// app/shop/[slug]/page.tsx
 'use client';
-
 import { useState } from 'react';
 import Image from 'next/image';
 import Breadcrumb from 'src/app/components/BreadCrumb';
@@ -14,7 +12,7 @@ const ProductDetail = ({ params }: { params: { slug: string } }) => {
     name: 'Asgaard sofa',
     price: 2500.00,
     description: 'Setting the bar as one of our most popular and aesthetically pleasing pieces, the Asgaard sofa is influenced by modern Nordic design...',
-    sku: '1234',
+    sku: '1234',''
     category: 'Sofa',
     tags: ['Sofa', 'Chair', 'Home'],
     dimensions: {
@@ -103,8 +101,6 @@ const ProductDetail = ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
       </div>
-
-      {/* Product Tabs */}
       <div className="mt-16">
         <div className="border-b">
           <div className="flex space-x-8">
@@ -113,6 +109,7 @@ const ProductDetail = ({ params }: { params: { slug: string } }) => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-2 -mb-px ${
+                  
                   activeTab === tab
                     ? 'border-b-2 border-yellow-500 font-semibold'
                     : 'text-gray-500'

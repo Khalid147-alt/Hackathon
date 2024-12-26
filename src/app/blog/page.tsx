@@ -7,8 +7,9 @@ export default function BlogTemplate() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
       <header className="text-center mb-16">
-        <h1 className="text-3xl font-semibold">Blog</h1>
+        <h1 className="text-3xl font-semibold mt-8">Blog</h1>
       </header>
+
 
       {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

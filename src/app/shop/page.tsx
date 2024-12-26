@@ -1,6 +1,5 @@
 import React from "react";
 import ProductDetails from "./Product-details";
-
 const Shop = () => {
   const products = [
     {
@@ -187,7 +186,7 @@ const Shop = () => {
         </div>
       </div>
 
-      {/* Filter and Sorting */}
+
       <div className="container mx-auto px-4 py-6 flex flex-wrap items-center justify-between bg-gray-100 rounded-md">
         <div className="flex items-center gap-4">
           <button className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-sm font-medium rounded-md">
