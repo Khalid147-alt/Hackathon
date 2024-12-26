@@ -74,7 +74,7 @@ export default function BlogTemplate() {
             <Link href="#" className="block group">
               <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
                 <Image
-                  src="/work.jpeg?height=400&width=600"
+                  src="/work1.jpeg?height=400&width=600"
                   alt="Coffee cup and laptop"
                   width={600}
                   height={400}
