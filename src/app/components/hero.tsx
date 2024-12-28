@@ -1,12 +1,11 @@
-
 import Image from "next/image";
-import sofaImage from "../public/sofa.png"; 
+import sofaImage from "public\Asgaard sofa 3.png"; 
 
 export default function Hero() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between px-8 py-12 bg-secondary">
+    <div className="flex flex-col md:flex-row items-center justify-between px-4 py-12 bg-secondary">
       <div className="space-y-6 md:w-1/2">
-        <h1 className="text-4xl font-bold leading-tight">
+        <h1 className="text-3xl md:text-4xl font-bold leading-tight">
           High-Quality Furniture Just For You
         </h1>
         <p className="text-gray-700">
@@ -21,7 +20,7 @@ export default function Hero() {
         <Image
           src={sofaImage}
           alt="Sofa"
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg w-full"
           width={500}
           height={300}
         />

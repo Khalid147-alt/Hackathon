@@ -1,11 +1,12 @@
 import React from "react";
+import Descriptions from "../components/Description";
 
 const ProductDetails = () => {
   const relatedProducts = [
     {
       name: "Syltherine",
       price: "Rp 2.500.000",
-      image: "/nn1.png", // Replace with actual image URLs
+      image: "/nn1.png",
       badge: "Sale",
     },
     {
@@ -41,7 +42,7 @@ const ProductDetails = () => {
         <div>
           <div className="mb-4">
             <img
-              src="/Asgaard sofa 3.png" // Replace with the main product image
+              src="/Asgaard sofa 3.png" 
               alt="Asgaard sofa"
               className="w-full h-96 object-cover rounded-lg"
             />
@@ -109,9 +110,10 @@ const ProductDetails = () => {
 
           {/* Buttons */}
           <div className="flex items-center gap-4 mt-6">
+            <a href="/cart">
             <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
               Add to Cart
-            </button>
+            </button></a>
             <button className="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300">
               Compare
             </button>
@@ -119,26 +121,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="container mx-auto px-4 py-6">
-        <div className="flex border-b">
-          <button className="px-4 py-2 text-gray-700 border-b-2 border-blue-600">
-            Description
-          </button>
-          <button className="px-4 py-2 text-gray-500 hover:text-gray-700">
-            Additional Information
-          </button>
-          <button className="px-4 py-2 text-gray-500 hover:text-gray-700">
-            Reviews (4)
-          </button>
-        </div>
-        <div className="mt-6">
-          <p className="text-sm text-gray-600">
-            This sofa is made from high-quality materials, ensuring durability
-            and comfort. It's perfect for modern interiors.
-          </p>
-        </div>
-      </div>
+
 
       {/* Related Products */}
       <div className="container mx-auto px-4 py-6">
@@ -171,6 +154,7 @@ const ProductDetails = () => {
           ))}
         </div>
       </div>
+      <Descriptions />
     </div>
   );
 };

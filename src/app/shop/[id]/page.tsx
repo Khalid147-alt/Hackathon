@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link";
+
+import PrdCard from "../../components/prdcard";
 
 const Shop = () => {
   const products = [
@@ -251,8 +252,10 @@ const Shop = () => {
               </div>
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <a href='/products'>
-              <button className="bg-white text-sm text-gray-700 py-2 px-4 rounded-md shadow hover:bg-gray-100">Add To Cart</button>
+              <a href="/products">
+              <button className="bg-white text-sm text-gray-700 py-2 px-4 rounded-md shadow hover:bg-gray-100">
+                Add to Cart
+              </button>
               </a>
             </div>
           </div>
@@ -271,12 +274,12 @@ const Shop = () => {
           3
         </button>
         <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
-
           Next
         </button>
       </div>
       
-
+      
+      
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const InstagramGallery = () => {
-  // Array of image sources
+
   const images = [
     "/11.png",
     "/12.png",

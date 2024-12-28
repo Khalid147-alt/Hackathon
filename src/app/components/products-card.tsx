@@ -2,7 +2,7 @@ import Image from "next/image"
 import  { Badge}  from "./ui/badges"
 import { cn } from "./lib/utilis";
 
-// Ensure cn is callable
+
 if (typeof cn !== 'function') {
   throw new Error('cn is not a function');
 }

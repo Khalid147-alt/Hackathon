@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Sample Data for Recent Posts
+
 const recentPosts = [
   {
     id: 1,

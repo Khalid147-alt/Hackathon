@@ -4,8 +4,19 @@
 @tailwind utilities;
 
 @layer components {
+
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+
   .nav-link {
-    @apply text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium relative transition-colors duration-200;
+    @apply text-sm sm:text-base;
+  }
+  
+  
+  .section-padding {
+    @apply py-8 sm:py-12 lg:py-16;
   }
 
   .nav-link::after {

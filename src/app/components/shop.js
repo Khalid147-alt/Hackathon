@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image"; // Importing Image from next/image
 
 const Shop = () => {
   const products = [
@@ -38,9 +39,11 @@ const Shop = () => {
         <Link href={`/product/${product.id}`} key={product.id}>
           <div className="bg-white shadow-md rounded-lg overflow-hidden group relative cursor-pointer">
             {/* Product Image */}
-            <img
+            <Image
               src={product.image}
               alt={product.name}
+              width={400} // Set appropriate width
+              height={400} // Set appropriate height
               className="w-full h-52 object-cover group-hover:opacity-75 transition-opacity"
             />
             {product.badge && (

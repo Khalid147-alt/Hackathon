@@ -1,8 +1,6 @@
-
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { FiShoppingCart, FiHeart, FiUser, FiSearch } from 'react-icons/fi';
 
@@ -27,33 +25,23 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+        
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
-             
-                <img src='/lgo.png' alt=''className="w-[50px] h-[40px] pl-[13px]"></img>
-             
+              <img src='/lgo.png' alt='' className="w-[40px] sm:w-[50px] h-[30px] sm:h-[40px] pl-[13px]" />
               <span className="ml-2 text-2xl font-bold text-gray-900">Furniro</span>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="nav-link">
-              Home
-            </Link>
-            <Link href="/shop" className="nav-link">
-              Shop
-            </Link>
-            <Link href="/blog" className="nav-link">
-              Blog
-            </Link>
-            <Link href="/contact" className="nav-link">
-              Contact
-            </Link>
+            <Link href="/" className="nav-link">Home</Link>
+            <Link href="/shop" className="nav-link">Shop</Link>
+            <Link href="/blog" className="nav-link">Blog</Link>
+            <Link href="/contact" className="nav-link">Contact</Link>
           </div>
 
-          {/* Icons */}
+         
           <div className="hidden md:flex items-center space-x-6">
             <button className="icon-button">
               <FiUser className="w-6 h-6" />
@@ -69,7 +57,6 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -99,21 +86,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+     
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link href="/" className="mobile-nav-link">
-            Home
-          </Link>
-          <Link href="/shop" className="mobile-nav-link">
-            Shop
-          </Link>
-          <Link href="/blog" className="mobile-nav-link">
-            Blog
-          </Link>
-          <Link href="/contact" className="mobile-nav-link">
-            Contact
-          </Link>
+          <Link href="/" className="mobile-nav-link">Home</Link>
+          <Link href="/shop" className="mobile-nav-link">Shop</Link>
+          <Link href="/blog" className="mobile-nav-link">Blog</Link>
+          <Link href="/contact" className="mobile-nav-link">Contact</Link>
         </div>
         <div className="px-2 py-3 border-t border-gray-200 flex justify-around">
           <button className="mobile-icon-button">
