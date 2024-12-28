@@ -1,12 +1,14 @@
-"use client"
+'use client';
 import React from 'react';
+import Link from 'next/link'; // Import Link from next/link
 import { Trash2 } from 'lucide-react';
+import Image from 'next/image'; // Import Image from next/image
 
 const CartPage = () => {
-
   const cartItem = {
     name: 'Asgaard sofa',
-    price: 250000.00,
+    price: 250000.0,
+
     quantity: 1,
     image: '/mainimgcp.jpeg',
   };
@@ -20,9 +22,9 @@ const CartPage = () => {
           <div className="pt-24">
             <h1 className="text-3xl font-semibold text-center">Cart</h1>
             <div className="flex items-center justify-center gap-2 mt-2 text-sm">
-              <a href="/" className="text-gray-600 hover:text-gray-800">
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
                 Home
-              </a>
+              </Link>
               <span className="text-gray-400">&gt;</span>
               <span className="text-gray-800">Cart</span>
             </div>
@@ -47,8 +49,10 @@ const CartPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 relative">
-                    <img
+                    <Image
                       src="/Asgaard sofa 3.png"
+                      width={200}
+                      height={200}
                       alt={cartItem.name}
                       className="rounded-lg w-full h-full object-cover"
                     />
@@ -102,10 +106,11 @@ const CartPage = () => {
                     Rs. {cartItem.price.toLocaleString()}
                   </span>
                 </div>
-                <a href='/checkout'>
-                <button className="w-full bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
-                  Check Out
-                </button></a>
+                <a href="/checkout">
+                  <button className="w-full bg-black text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+                    Check Out
+                  </button>
+                </a>
               </div>
             </div>
           </div>

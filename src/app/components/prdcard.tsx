@@ -1,18 +1,20 @@
-"use client"
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
+
+import Image from 'next/image'; // Import Image from next/image
 
 const PrdCard: React.FC = () => {
-  const [selectedSize, setSelectedSize] = useState<string>("L");
-  const [selectedColor, setSelectedColor] = useState<string>("blue");
+  const [selectedSize, setSelectedSize] = useState<string>('L');
+  const [selectedColor, setSelectedColor] = useState<string>('blue');
 
   const thumbnailImages: string[] = [
-    "/path/to/img1.jpg",
-    "/path/to/img2.jpg",
-    "/path/to/img3.jpg",
+    '/path/to/img1.jpg',
+    '/path/to/img2.jpg',
+    '/path/to/img3.jpg',
   ];
 
-  const sizes: string[] = ["XS", "S", "M", "L", "XL"];
-  const colors: string[] = ["blue", "purple", "gold"];
+  const sizes: string[] = ['XS', 'S', 'M', 'L', 'XL'];
+  const colors: string[] = ['blue', 'purple', 'gold'];
 
   return (
     <div className="container mx-auto p-4 lg:px-16">
@@ -21,7 +23,7 @@ const PrdCard: React.FC = () => {
         {/* Product Images */}
         <div>
           <div className="aspect-w-4 aspect-h-3 bg-gray-200 rounded-lg overflow-hidden">
-            <img
+            <Image
               src="/path/to/main-product.jpg"
               alt="Asgaard Sofa"
               className="object-cover w-full h-full"
@@ -33,7 +35,7 @@ const PrdCard: React.FC = () => {
                 key={index}
                 className="w-16 h-16 rounded-md overflow-hidden border border-gray-200"
               >
-                <img
+                <Image
                   src={src}
                   alt={`Thumbnail ${index + 1}`}
                   className="object-cover w-full h-full"
@@ -53,7 +55,9 @@ const PrdCard: React.FC = () => {
                 <span key={i}>&#9733;</span> // Star rating
               ))}
             </div>
-            <span className="ml-2 text-sm text-gray-500">(5 Customer Reviews)</span>
+            <span className="ml-2 text-sm text-gray-500">
+              (5 Customer Reviews)
+            </span>
           </div>
           <p className="text-sm text-gray-600 mt-4">
             Setting the bar as one of the loudest speakers in its class, the
@@ -71,8 +75,8 @@ const PrdCard: React.FC = () => {
                   onClick={() => setSelectedSize(size)}
                   className={`px-4 py-2 border rounded-md ${
                     selectedSize === size
-                      ? "border-black text-black"
-                      : "border-gray-300 text-gray-500"
+                      ? 'border-black text-black'
+                      : 'border-gray-300 text-gray-500'
                   }`}
                 >
                   {size}
@@ -90,7 +94,7 @@ const PrdCard: React.FC = () => {
                   key={color}
                   onClick={() => setSelectedColor(color)}
                   className={`w-8 h-8 rounded-full cursor-pointer ${
-                    selectedColor === color ? "ring-2 ring-black" : ""
+                    selectedColor === color ? 'ring-2 ring-black' : ''
                   }`}
                   style={{ backgroundColor: color }}
                 ></div>
@@ -126,7 +130,9 @@ const PrdCard: React.FC = () => {
       {/* Tabs Section */}
       <div className="mt-12">
         <div className="flex space-x-4 border-b border-gray-300">
-          <button className="text-black pb-2 border-b-2 border-black">Description</button>
+          <button className="text-black pb-2 border-b-2 border-black">
+            Description
+          </button>
           <button className="text-gray-500 pb-2">Additional Information</button>
           <button className="text-gray-500 pb-2">Reviews [5]</button>
         </div>
@@ -134,9 +140,9 @@ const PrdCard: React.FC = () => {
         {/* Tab Content */}
         <div className="mt-4">
           <p className="text-sm text-gray-600">
-            Embodying the raw, wayward spirit of rock ’n’ roll, the Kilburn
-            portable active stereo speaker takes the unmistakable look and
-            sound of Marshall, unplugs the chords, and takes the show on the
+            Embodying the raw, wayward spirit of rock &apos;n&apos; roll, the
+            Kilburn portable active stereo speaker takes the unmistakable look
+            and sound of Marshall, unplugs the chords, and takes the show on the
             road.
           </p>
           <p className="mt-4 text-sm text-gray-600">

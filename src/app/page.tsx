@@ -2,12 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import ProductsPage from './components/product-page';
-
 import ProPage from './components/pro-page';
-import RecentPosts from './components/recentposts';
-import Hero from './components/hero';
-
-import PrdCard from './components/prdcard';
 
 export default function Home() {
   return (

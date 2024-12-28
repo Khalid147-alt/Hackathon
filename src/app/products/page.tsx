@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'; // Import Image from next/image
 import Descriptions from "../components/Description";
 
 const ProductDetails = () => {
@@ -41,26 +42,34 @@ const ProductDetails = () => {
         {/* Image Gallery */}
         <div>
           <div className="mb-4">
-            <img
+            <Image
               src="/Asgaard sofa 3.png" 
               alt="Asgaard sofa"
+              width={800}
+              height={800}
               className="w-full h-96 object-cover rounded-lg"
             />
           </div>
           <div className="flex gap-2">
-            <img
+            <Image
               src="/111.png" 
               alt="Thumbnail"
+              width={80}
+              height={80}
               className="w-20 h-20 object-cover rounded-lg cursor-pointer"
             />
-            <img
+            <Image
               src="/222.png" 
               alt="Thumbnail"
+              width={80}
+              height={80}
               className="w-20 h-20 object-cover rounded-lg cursor-pointer"
             />
-            <img
+            <Image
               src="/333.png" 
               alt="Thumbnail"
+              width={80}
+              height={80}
               className="w-20 h-20 object-cover rounded-lg cursor-pointer"
             />
           </div>
@@ -134,9 +143,11 @@ const ProductDetails = () => {
               key={index}
               className="bg-white shadow-md rounded-lg overflow-hidden group relative"
             >
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
+                width={400}
+                height={400}
                 className="w-full h-40 object-cover group-hover:opacity-75 transition-opacity"
               />
               {product.badge && (

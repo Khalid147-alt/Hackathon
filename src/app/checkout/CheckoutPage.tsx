@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Link from 'next/link'; // Import Link from next/link
+import Link from 'next/link';
 
 const CheckoutPage = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ const CheckoutPage = () => {
     price: 250000.00
   };
 
-const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement>) => {
+const handleInputChange = (e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -42,9 +42,9 @@ const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputE
           <div className="pt-24">
             <h1 className="text-3xl font-semibold text-center">Checkout</h1>
             <div className="flex items-center justify-center gap-2 mt-2 text-sm">
-<Link href="/" className="text-gray-600 hover:text-gray-800">
-  Home
-</Link>
+              <Link href="/" className="text-gray-600 hover:text-gray-800">
+                Home
+              </Link>
               <span className="text-gray-400">&gt;</span>
               <span className="text-gray-800">Checkout</span>
             </div>

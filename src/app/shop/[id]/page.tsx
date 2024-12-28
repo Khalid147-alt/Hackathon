@@ -1,6 +1,6 @@
 import React from "react";
 
-import PrdCard from "../../components/prdcard";
+
 
 const Shop = () => {
   const products = [

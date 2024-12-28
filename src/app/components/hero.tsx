@@ -1,5 +1,5 @@
-import Image from "next/image";
-import sofaImage from "public\Asgaard sofa 3.png"; 
+import Image from 'next/image';
+import sofaImage from 'publicAsgaard sofa 3.png';
 
 export default function Hero() {
   return (
