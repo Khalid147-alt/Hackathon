@@ -1,8 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-import ProductsPage from './components/product-page';
 import ProPage from './components/pro-page';
+import Products from './components/dynamicPro';
+import InstagramGallery from './components/instagalery';
+import ProductList from './components/dynamicPro';
+
+
 
 export default function Home() {
   return (
@@ -36,8 +40,10 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-600 mb-8 max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis.
+              Upgrade your space with our premium-quality furniture, crafted for
+              style, comfort, and durability. At unbeatable factory rates, we
+              make luxury affordable for every home and office. Explore designs
+              that transform your vision into reality—without breaking the bank!
             </p>
 
             <button className="bg-[#B08D57] text-white px-8 py-3 rounded-lg transition-all duration-300 ease-out hover:bg-[#8B6D3F] hover:shadow-lg active:transform active:scale-95">
@@ -47,11 +53,12 @@ export default function Home() {
         </div>
       </main>
       <ProPage />
+      <InstagramGallery />
 
-      <ProductsPage />
+      
+      <Products />
       
       
-    
       
     </>
   );

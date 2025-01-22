@@ -37,25 +37,18 @@ const Descriptions: React.FC = () => {
               the road.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Weighing in under 7 pounds, the Kilburn is a lightweight piece of
-              vintage-styled engineering. Setting the bar as one of the loudest
-              speakers in its class, the Kilburn is a compact, stout-hearted
-              hero with well-balanced audio which boasts a clear midrange and
-              extended highs for a sound that is both articulate and pronounced.
-              The analogue knobs allow you to fine-tune the controls to your
-              personal preferences while the guitar-influenced leather strap
-              enables easy and stylish travel.
+           Decsription
             </p>
           </div>
         )}
         {activeTab === 'additional information' && (
           <p className="text-gray-700 leading-relaxed">
-            Additional product information will be here.
+            We are lonchint it soon, so stay tuned!
           </p>
         )}
         {activeTab === 'reviews [5]' && (
           <p className="text-gray-700 leading-relaxed">
-            Customer reviews will be displayed here.
+            Reviews
           </p>
         )}
       </div>

@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="space-y-4">
           <h2 className="text-xl font-bold text-black">Funiro.</h2>
           <p className="text-gray-600">
-            400 University Drive Suite 200 Coral Gables, <br />
-            FL 33134 USA
+            Karachi Sindh <br />
+            Karachi, Sindh Pakistan
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-8 border-t pt-4 text-gray-500 text-sm">
-        © 2023 Funiro. All rights reserved.
+        © 2025 Furniwise. All rights reserved.
       </div>
     </footer>
   );
