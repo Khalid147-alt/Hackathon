@@ -1,0 +1,11 @@
+Test Case ID,Feature,Steps,Expected Result,Status,Severity,Remarks
+TC001,Product Listing,Load homepage,Products should display correctly,Passed,Low,N/A
+TC002,Product Details,Click on a product,Product details should be visible,Passed,Low,N/A
+TC003,Add to Cart,Click 'Add to Cart' button,Item should be added to cart,passed,Low,Fix button event
+TC004,Cart Functionality,View cart after adding items,Items should be listed in cart,Passed,Medium,N/A
+TC005,Cart Persistence,Refresh page after adding to cart,Items should remain in cart,Passed,Low,Fix local storage issue
+TC006,Responsive Design,Resize window to mobile size,Layout should adjust correctly,Passed,Medium,N/A
+TC007,Contact Us Form,Submit form with valid inputs,Message should send successfully,Passed,Low,N/A
+TC008,Contact Us Validation,Submit empty form,Error message should appear,Failed,Medium,Add validation
+TC009,Page Load Speed,Load homepage,Should load within 2s,Passed,Low,Optimize images
+TC010,Cross-Browser Testing,Open site on different browsers,Should work on all major browsers,Passed,Medium,N/A
